@@ -1,0 +1,35 @@
+<!doctype>
+<html>
+<head>
+	<title>jsPDF</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />	
+	<script type="text/javascript" src="jsPDF/examples/js/jquery/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="jsPDF/examples/js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+	
+	<script type="text/javascript" src="jsPDF/jspdf.js"></script>
+	<script type="text/javascript" src="jsPDF/libs/FileSaver.js/FileSaver.js"></script>
+	<script type="text/javascript" src="jsPDF/libs/BlobBuilder.js/BlobBuilder.js"></script>
+
+	<script type="text/javascript" src="jsPDF/jspdf.plugin.addimage.js"></script>
+	<script type="text/javascript" src="jsPDF/jspdf.plugin.standard_fonts_metrics.js"></script>
+	<script type="text/javascript" src="jsPDF/jspdf.plugin.split_text_to_size.js"></script>
+	<script type="text/javascript" src="jsPDF/jspdf.plugin.from_html.js"></script>
+	<script type="text/javascript" src="jsPDF/jspdf.plugin.sillysvgrenderer.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+
+</head>
+
+<body>
+	<h1>Wall Of Nerds - Steckbrief Generator</h1>
+
+	<form>
+		<label for="nickname">Nickname:</label><input type="text" id="nickname" name="nickname" value="Laborant"><br>
+		<label for="subtitle">Subtitle:</label><input type="text" id="subtitle" name="subtitle" value="Elite-H4XX0r"><br>
+	</form>
+
+	<a href="javascript:start();">Render</a>
+	<div id="output"></div>
+	
+</body>
+</html>
