@@ -1,3 +1,6 @@
 [submodule "jsPDF"]
 	path = jsPDF
 	url = https://github.com/MrRio/jsPDF.git
+[submodule "jquery-qrcode"]
+	path = jquery-qrcode
+	url = https://github.com/jeromeetienne/jquery-qrcode.git

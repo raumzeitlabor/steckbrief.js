@@ -4,6 +4,10 @@ var url1, src1;
 
 function start() {
 	images = new Object();
+	
+	images.qrcode = new Object();
+	$('#qrcode').qrcode($("#link").val());
+	images.qrcode.data = $("#qrcode canvas").get(0).toDataURL("image/jpeg");
 
 	images.person = new Object();
 	images.person.url = "images/document.svg";
@@ -99,7 +103,7 @@ function renderPDF() {
 	
 	//doc.rect(20, 20, 10, 10); 
 	// QRCode
-	doc.addImage(images.a.data, 'JPEG', 100, 13, 30, 30);
+	doc.addImage(images.qrcode.data, 'JPEG', 100, 13, 30, 30);
 	
 	// Big Picture
 	doc.addImage(images.person.data, 'JPEG', 29, 50, 90, 90);

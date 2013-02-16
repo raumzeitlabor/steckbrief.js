@@ -16,6 +16,7 @@
 	<script type="text/javascript" src="jsPDF/jspdf.plugin.split_text_to_size.js"></script>
 	<script type="text/javascript" src="jsPDF/jspdf.plugin.from_html.js"></script>
 	<script type="text/javascript" src="jsPDF/jspdf.plugin.sillysvgrenderer.js"></script>
+	<script type="text/javascript" src="jquery-qrcode/jquery.qrcode.min.js"></script>
 	<script type="text/javascript" src="main.js"></script>
 
 </head>
@@ -26,7 +27,9 @@
 	<form>
 		<label for="nickname">Nickname:</label><input type="text" id="nickname" name="nickname" value="Laborant"><br>
 		<label for="subtitle">Subtitle:</label><input type="text" id="subtitle" name="subtitle" value="Elite-H4XX0r"><br>
+		<label for="image">Link (QRCode):</label><input type="text" id="link" name="link"><br>
 		<label for="image">Image:</label><input type="text" id="image" name="image"><br>
+		<h2>Badges</h2>
 		<select id="badge01" name="badge01"></select><br>
 		<select id="badge02" name="badge02"></select><br>
 		<select id="badge03" name="badge03"></select><br>
@@ -42,6 +45,6 @@
 
 	<a href="javascript:start();">Render</a>
 	<div id="output"></div>
-	
+	<div id="qrcode" sytel="display:none;"></div>
 </body>
 </html>
