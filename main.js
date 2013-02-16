@@ -10,10 +10,7 @@ function start() {
 	images.qrcode.data = $("#qrcode canvas").get(0).toDataURL("image/jpeg");
 
 	images.person = new Object();
-	images.person.url = "images/document.svg";
-	
-	images.a = new Object();
-	images.a.url = "images/document.svg";
+	images.person.url = $("#image").val();
 
 	images.badge01 = new Object();
 	images.badge01.url = "images/badges/" + $("#badge01").val();
@@ -36,9 +33,8 @@ function start() {
 	images.badge10 = new Object();
 	images.badge10.url = "images/badges/" + $("#badge10").val();
 	
-	imageCounter = 12;
+	imageCounter = 11;
 	imageData("person", imageCallback);
-	imageData("a", imageCallback);
 	imageData("badge01", imageCallback);
 	imageData("badge02", imageCallback);
 	imageData("badge03", imageCallback);

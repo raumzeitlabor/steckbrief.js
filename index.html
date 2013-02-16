@@ -1,7 +1,7 @@
 <!doctype>
 <html>
 <head>
-	<title>jsPDF</title>
+	<title>Wall Of Nerds - Steckbrief Generator</title>
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />	
 	<script type="text/javascript" src="jsPDF/examples/js/jquery/jquery-1.7.1.min.js"></script>
@@ -27,8 +27,8 @@
 	<form>
 		<label for="nickname">Nickname:</label><input type="text" id="nickname" name="nickname" value="Laborant"><br>
 		<label for="subtitle">Subtitle:</label><input type="text" id="subtitle" name="subtitle" value="Elite-H4XX0r"><br>
-		<label for="image">Link (QRCode):</label><input type="text" id="link" name="link"><br>
-		<label for="image">Image:</label><input type="text" id="image" name="image"><br>
+		<label for="image">Link (QRCode):</label><input type="text" id="link" name="link" value="http://wiki.raumzeitlabor.de/Benutzer:Bernd"><br>
+		<label for="image">Image:</label><textarea id="image" name="image">data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjEwMHB4IiBoZWlnaHQ9Ijk1Ljg4M3B4IiB2aWV3Qm94PSIwIDAgMTAwIDk1Ljg4MyIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTAwIDk1Ljg4MyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBvbHlnb24gcG9pbnRzPSI2MC45MDYsNzguMzg0IDc3LjgzMyw3OC4zODQgNzcuODMzLDk1Ljg4MyA2MC45MDYsOTUuODgzIDYwLjkwNiw4MC43NjcgICIvPgoJPHBhdGggZD0iTTkxLjkxNSw3LjUzOUM4Ni41MTcsMi40NzQsNzkuMzA0LTAuMDEzLDcwLjczNiwwQzYxLjQ1OS0wLjAxMyw1My43NSwyLjkxNyw0OC4yNDMsOC44MDIgICBjLTUuNTUzLDUuODQ2LTguMjI5LDEzLjY1OC04LjIwOSwyMi45MXYyLjM2M2gxNS41NTNsMC4wNzgtMi4yNzJjMC4yMDktNS4xMSwxLjA1NS04Ljg1NCwyLjI4NS0xMS4xMzkgICBjMi4zMTItNC4yNDUsNS45MDUtNi4yNzYsMTIuMzYzLTYuMzU0YzUuMjU0LDAuMDIsOC40NSwxLjM2MSwxMC4yODYsMy41NDJjMi4wNTEsMi41NTksMy4wNiw1LjM4NCwzLjA4Niw4LjkwNiAgIGMwLDIuMzgzLTAuNjcxLDQuNjM1LTIuMTQ4LDYuOTc5Yy0wLjg1MywxLjM1NC0xLjkzNCwyLjYzLTMuMjg3LDMuODkzbC01LjAyNiw0Ljg3Yy00LjkwOSw0Ljc1Mi04LjIyMyw5LjAxLTkuODMsMTMuMTI1ICAgYy0xLjU0MywzLjk4My0yLjI0LDguOTQ0LTIuMjQsMTQuOTg2djIuMzU2aDE1LjYzMnYtMi4zNTZjMC00Ljk3NCwwLjYzOC04LjU4MSwxLjYyNy0xMC42NzdjMC45NzEtMi4xNjIsMy4zODYtNS4yNjEsNy4yNzgtOC45MjYgICBjNS41NDctNS4yOCw5LjI2NS05LjI4NCwxMS4yNy0xMi4yOThjMi4wOS0zLjE3LDMuMDYtNy4xNzQsMy4wNC0xMS44MjlDMTAwLjAzOSwxOS4xOTIsOTcuMjk4LDEyLjUyNiw5MS45MTUsNy41Mzl6Ii8+CjwvZz4KPHBhdGggZD0iTTE2LjYwMywwYy00LjUxMiwwLTguMTU3LDMuNjQ2LTguMTU3LDguMTQ1czMuNjQ2LDguMTQ1LDguMTU3LDguMTQ1YzQuNDg2LDAsOC4xMzEtMy42NDYsOC4xMzEtOC4xNDVTMjEuMDg5LDAsMTYuNjAzLDB6Ii8+CjxwYXRoIGQ9Ik0zMC4wNzMsMjQuNzUyYy0xLjk5OS00LjA3Ni01LjA5Ny02LjU2Mi0xMi42OTUtNi41NjJoLTAuNzgxaC0wLjc4MWMtNy41OTgsMC0xMC42OTYsMi40ODctMTIuNjk1LDYuNTYyICBDMi4xMjUsMjYuNzk2LDAuMDE1LDUyLjMzLDAuMDE1LDUyLjMzYy0wLjE1NiwxLjUxMSwwLjkzMSwyLjg1MiwyLjQzNSwzLjAwOGMwLjEwNCwwLjAxNCwwLjE5NSwwLjAyLDAuMjkzLDAuMDIgIGMxLjM4NywwLDIuNTcyLTEuMDQ4LDIuNzE1LTIuNDU0bDIuMTQ4LTIyLjE5NGwwLjUyNywxNy4yMjdMNi41NzEsOTIuNDU5Yy0wLjExMSwxLjc1OCwxLjIxMSwzLjI5NCwyLjk2MiwzLjQxMSAgYzAuMDg0LDAuMDEzLDAuMTY5LDAuMDEzLDAuMjI4LDAuMDEzYzEuNjczLDAsMy4wODYtMS4yODksMy4yMDktMi45NzVsMy42MjYtMzYuNjczbDMuNjI2LDM2LjY3MyAgYzAuMTI0LDEuNjg2LDEuNTM2LDIuOTc1LDMuMjA5LDIuOTc1YzAuMDU5LDAsMC4xMzcsMCwwLjIyOC0wLjAxM2MxLjc1MS0wLjExNywzLjA3My0xLjY1MywyLjk2Mi0zLjQxMWwtMS41NjktNDQuNTI0bDAuNTI3LTE3LjIyNyAgbDIuMTQ4LDIyLjE5NGMwLjE1LDEuNDA2LDEuMzM1LDIuNDU0LDIuNzE1LDIuNDU0YzAuMTA0LDAsMC4xOTUtMC4wMDYsMC4yOTMtMC4wMmMxLjUxMS0wLjE1NiwyLjU5OC0xLjQ5NywyLjQzNS0zLjAwOCAgQzMzLjE3Miw1Mi4zMywzMS4wNjksMjYuNzk2LDMwLjA3MywyNC43NTJ6Ii8+Cjwvc3ZnPg==</textarea><br>
 		<h2>Badges</h2>
 		<select id="badge01" name="badge01"></select><br>
 		<select id="badge02" name="badge02"></select><br>
@@ -45,6 +45,6 @@
 
 	<a href="javascript:start();">Render</a>
 	<div id="output"></div>
-	<div id="qrcode" sytel="display:none;"></div>
+	<div id="qrcode" style="display:none;"></div>
 </body>
 </html>
