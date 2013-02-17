@@ -9,42 +9,17 @@ function start() {
 	$('#qrcode').qrcode($("#link").val());
 	images.qrcode.data = $("#qrcode canvas").get(0).toDataURL("image/jpeg");
 
+	imageCounter = 11;
+
 	images.person = new Object();
 	images.person.url = $("#image").val();
-
-	images.badge01 = new Object();
-	images.badge01.url = "img/badges/" + $("#badge01").val();
-	images.badge02 = new Object();
-	images.badge02.url = "img/badges/" + $("#badge02").val();
-	images.badge03 = new Object();
-	images.badge03.url = "img/badges/" + $("#badge03").val();
-	images.badge04 = new Object();
-	images.badge04.url = "img/badges/" + $("#badge04").val();
-	images.badge05 = new Object();
-	images.badge05.url = "img/badges/" + $("#badge05").val();
-	images.badge06 = new Object();
-	images.badge06.url = "img/badges/" + $("#badge06").val();
-	images.badge07 = new Object();
-	images.badge07.url = "img/badges/" + $("#badge07").val();
-	images.badge08 = new Object();
-	images.badge08.url = "img/badges/" + $("#badge08").val();
-	images.badge09 = new Object();
-	images.badge09.url = "img/badges/" + $("#badge09").val();
-	images.badge10 = new Object();
-	images.badge10.url = "img/badges/" + $("#badge10").val();
-	
-	imageCounter = 11;
 	imageData("person", imageCallback);
-	imageData("badge01", imageCallback);
-	imageData("badge02", imageCallback);
-	imageData("badge03", imageCallback);
-	imageData("badge04", imageCallback);
-	imageData("badge05", imageCallback);
-	imageData("badge06", imageCallback);
-	imageData("badge07", imageCallback);
-	imageData("badge08", imageCallback);
-	imageData("badge09", imageCallback);
-	imageData("badge10", imageCallback);
+
+	for (var i=0;i<10;i++) {
+		images["badge"+i] = new Object();
+		images["badge"+i].url = "img/badges/" + $("#badge"+i).val();
+		imageData("badge"+i, imageCallback);
+	}
 }
 
 function imageCallback() {
@@ -105,16 +80,16 @@ function renderPDF() {
 	doc.addImage(images.person.data, 'JPEG', 29, 50, 90, 90);
 	
 	//Bagdes
-	doc.addImage(images.badge01.data, 'JPEG', 16, 150, 20, 20);
-	doc.addImage(images.badge02.data, 'JPEG', 40, 150, 20, 20);
-	doc.addImage(images.badge03.data, 'JPEG', 64, 150, 20, 20);
-	doc.addImage(images.badge04.data, 'JPEG', 88, 150, 20, 20);
-	doc.addImage(images.badge05.data, 'JPEG', 112, 150, 20, 20);
-	doc.addImage(images.badge06.data, 'JPEG', 16, 174, 20, 20);
-	doc.addImage(images.badge07.data, 'JPEG', 40, 174, 20, 20);
-	doc.addImage(images.badge08.data, 'JPEG', 64, 174, 20, 20);
-	doc.addImage(images.badge09.data, 'JPEG', 88, 174, 20, 20);
-	doc.addImage(images.badge10.data, 'JPEG', 112, 174, 20, 20);
+	doc.addImage(images.badge0.data, 'JPEG', 16, 150, 20, 20);
+	doc.addImage(images.badge1.data, 'JPEG', 40, 150, 20, 20);
+	doc.addImage(images.badge2.data, 'JPEG', 64, 150, 20, 20);
+	doc.addImage(images.badge3.data, 'JPEG', 88, 150, 20, 20);
+	doc.addImage(images.badge4.data, 'JPEG', 112, 150, 20, 20);
+	doc.addImage(images.badge5.data, 'JPEG', 16, 174, 20, 20);
+	doc.addImage(images.badge6.data, 'JPEG', 40, 174, 20, 20);
+	doc.addImage(images.badge7.data, 'JPEG', 64, 174, 20, 20);
+	doc.addImage(images.badge8.data, 'JPEG', 88, 174, 20, 20);
+	doc.addImage(images.badge9.data, 'JPEG', 112, 174, 20, 20);
 	
 	
 	doc.output("dataurlnewwindow", 'Test.pdf');
@@ -129,16 +104,9 @@ function getBadges(callback) {
 $("window").ready(function() {
 	getBadges(function(lines) {
 		$.each(lines, function(idx,line) {
-			$("<option/>").val(line).text(line).appendTo("#badge01");
-			$("<option/>").val(line).text(line).appendTo("#badge02");
-			$("<option/>").val(line).text(line).appendTo("#badge03");
-			$("<option/>").val(line).text(line).appendTo("#badge04");
-			$("<option/>").val(line).text(line).appendTo("#badge05");
-			$("<option/>").val(line).text(line).appendTo("#badge06");
-			$("<option/>").val(line).text(line).appendTo("#badge07");
-			$("<option/>").val(line).text(line).appendTo("#badge08");
-			$("<option/>").val(line).text(line).appendTo("#badge09");
-			$("<option/>").val(line).text(line).appendTo("#badge10");
+			for (var i=0;i<10;i++) {
+				$("<option/>").val(line).text(line).css("background","url(img/badges/"+line+") no-repeat right").css("background-size","auto 100%").appendTo("#badge"+i);
+			}
 		});
 	});
 });
