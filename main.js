@@ -13,25 +13,25 @@ function start() {
 	images.person.url = $("#image").val();
 
 	images.badge01 = new Object();
-	images.badge01.url = "images/badges/" + $("#badge01").val();
+	images.badge01.url = "img/badges/" + $("#badge01").val();
 	images.badge02 = new Object();
-	images.badge02.url = "images/badges/" + $("#badge02").val();
+	images.badge02.url = "img/badges/" + $("#badge02").val();
 	images.badge03 = new Object();
-	images.badge03.url = "images/badges/" + $("#badge03").val();
+	images.badge03.url = "img/badges/" + $("#badge03").val();
 	images.badge04 = new Object();
-	images.badge04.url = "images/badges/" + $("#badge04").val();
+	images.badge04.url = "img/badges/" + $("#badge04").val();
 	images.badge05 = new Object();
-	images.badge05.url = "images/badges/" + $("#badge05").val();
+	images.badge05.url = "img/badges/" + $("#badge05").val();
 	images.badge06 = new Object();
-	images.badge06.url = "images/badges/" + $("#badge06").val();
+	images.badge06.url = "img/badges/" + $("#badge06").val();
 	images.badge07 = new Object();
-	images.badge07.url = "images/badges/" + $("#badge07").val();
+	images.badge07.url = "img/badges/" + $("#badge07").val();
 	images.badge08 = new Object();
-	images.badge08.url = "images/badges/" + $("#badge08").val();
+	images.badge08.url = "img/badges/" + $("#badge08").val();
 	images.badge09 = new Object();
-	images.badge09.url = "images/badges/" + $("#badge09").val();
+	images.badge09.url = "img/badges/" + $("#badge09").val();
 	images.badge10 = new Object();
-	images.badge10.url = "images/badges/" + $("#badge10").val();
+	images.badge10.url = "img/badges/" + $("#badge10").val();
 	
 	imageCounter = 11;
 	imageData("person", imageCallback);
@@ -121,7 +121,7 @@ function renderPDF() {
 }
 
 function getBadges(callback) {
-	$.getJSON('images/badges/list.json', function(data) {
+	$.getJSON('img/badges/list.json', function(data) {
 		callback(data);
 	});
 }
