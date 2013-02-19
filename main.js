@@ -30,7 +30,7 @@ function imageCallback() {
 }
 
 function imageData(index,callback) {
-	var img = new Image();
+	var img = document.createElement('img');
 	var dataURL = "";
 	img.onload = function () {
 		// Create an empty canvas element
