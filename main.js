@@ -92,7 +92,7 @@ function renderPDF() {
 	doc.addImage(images.badge9.data, 'JPEG', 112, 174, 20, 20);
 	
 	
-	doc.output("dataurlnewwindow", 'Test.pdf');
+	doc.output("dataurl", 'Test.pdf');
 }
 
 function getBadges(callback) {
