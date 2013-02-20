@@ -39,26 +39,29 @@
 	  </div>
 	  
 	  <hr>
-		<h2>Steckbrief Generator</h2>
+	  <p>Die <a href="https://wiki.raumzeitlabor.de/wiki/Wall_of_Nerds">Wall Of Nerds</a> ist eine Wand im Mannheimer Hackerspace <a href="http://raumzeitlabor.de">RaumZeitLabor</a>. Hier können Mitglieder und andere galaktische Wesen einen Steckbrief von sich (Format: DIN A5 oder vergleichbar) aufhängen. Zusätzlich zu Name und Bild soll dieser Steckbrief auch eine Liste von Interessengebieten beinhalten. Dies soll helfen, sich untereinander besser kennenzulernen, und gemeinsame Interessensgebiete zu entdecken. Außerdem wird es für Neuankömmlinge einfacher, Anschluss zu finden.</p>
+		
+		<h2>Erstelle deinen Steckbrief</h2>
 		<form class="form-horizontal">
 			<div class="control-group">
-				<label for="nickname" class="control-label">Nickname</label>
+				<label for="nickname" class="control-label">Dein Nickname</label>
 				<input type="text" id="nickname" name="nickname" value="Laborant" class="controls">
 			</div>
 			<div class="control-group">
-				<label for="subtitle" class="control-label">Subtitle</label>
-				<input type="text" id="subtitle" name="subtitle" value="Elite-H4XX0r" class="controls">
+				<label for="subtitle" class="control-label">Untertitel (z.B. eMail, Tel.)</label>
+				<input type="text" id="subtitle" name="subtitle" value="laborant@raumzeitlabor.de" class="controls">
 			</div>
 			<div class="control-group">
-				<label for="image" class="control-label">Link (QRCode)</label>
-				<input type="text" id="link" name="link" class="controls" value="http://wiki.raumzeitlabor.de/Benutzer:Bernd">
+				<label for="image" class="control-label">Link für deinen QR-Code</label>
+				<input type="text" id="link" name="link" class="controls" value="http://wiki.raumzeitlabor.de/Benutzer:Laborant">
 			</div>
 			<div class="control-group">
-				<label for="image" class="control-label">Image</label>
+				<label for="image" class="control-label">Dein Bild (als <a href="http://dataurl.net/">DataURL</a>)</label>
 				<textarea id="image" name="image" class="controls">data:image/gif;base64,R0lGODdhAQABAIAAAP///////ywAAAAAAQABAAACAkQBADs=</textarea>
 			</div>
 			
 			<h3>Badges</h3>
+			<p>Mit den Badges kannst du deine Interessengebiete kennzeichen. Hier kannst du max. 10 verschiedene auswählen.</p>
 			<select id="badge0" name="badge0"></select><br>
 			<select id="badge1" name="badge1"></select><br>
 			<select id="badge2" name="badge2"></select><br>
@@ -72,7 +75,7 @@
 			
 		</form>
 
-		<a href="javascript:start();" class="btn btn-primary"><i class="icon-fire icon-white"></i> Create PDF</a>
+		<a href="javascript:start();" class="btn btn-primary"><i class="icon-fire icon-white"></i> Steckbrief erzeugen</a>
 		<div id="output"></div>
 		<div id="qrcode" style="display:none;"></div>
 	</div>
