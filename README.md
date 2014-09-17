@@ -12,6 +12,10 @@ Well, this is not the invention of the wheel all over again. It's based on a few
 * [jQuery-QRcode](http://jeromeetienne.github.com/jquery-qrcode/)
 * [Bootstrap](http://twitter.github.com/bootstrap/)
 
+## Installation
+Clone this repository. Then you have to init the submodules:
+git submodule init && git submodule update
+
 ## License
 > Copyright (c) 2013 Severin Schols>
 >
